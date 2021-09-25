@@ -42,7 +42,7 @@ def contact():
         phone =request.form.get('phone')
         message =request.form.get('message')
 
-        entry = Contacts(name=name, phone_num=phone, msg=message, email=email, date=datetime)
+        entry = Contacts(name=name, phone_num=phone, msg=message, email=email, date=datetime.now())
         db.session.add(entry)
         db.session.commit()
 
